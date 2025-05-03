@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanchenjunga:wght@400;500;600;700&display=swap");
+body {
+  font-family: "Kanchenjunga", sans-serif;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --baige-color: #e8dbcd;
+  --brown-color: #603a27;
+  --black-Color: #000;
+  --white-color: #fff;
+  --font-family: "Dancing Script", cursive;
+}
+
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+}
+:focus {
+  outline: none;
+}
+.container {
+  padding-inline: 50px;
+}
+@media (max-width: 767px) {
+  .container {
+    padding-inline: 22px;
+  }
+}
+.cart {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100vh;
+  background-color: var(--white-color);
+  z-index: 10000;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+.cart.active {
+  transform: translateX(0);
+}
+.cart .cart-header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--baige-color);
+  height: 70px;
+}
+.cart .cart-header .container h2 {
+  color: var(--black-Color);
+  font-size: 30px;
+  font-weight: bold;
+}
+.cart .cart-header .container .close {
+  cursor: pointer;
+  font-size: 30px;
+  color: var(--black-Color);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+}
+
+.cart .cart-header .container .close:hover {
+  color: var(--brown-color);
+  transform: scale(1.2);
+}
+@media (max-width: 767px) {
+  .cart .cart-header .container h2 {
+    font-size: 22px;
+  }
+  .cart .cart-header .container .close {
+    font-size: 22px;
+  }
+}
+
+.landing {
+  width: 100%;
+  height: 100vh;
+}
+
+.landing header .container .btn {
+  display: none;
+  cursor: pointer;
+}
+
+.landing header .container {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--baige-color);
+}
+.landing header .container .logo p {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--black-Color);
+  font-family: var(--font-family);
+}
+.landing header .container nav {
+  z-index: 1000;
+}
+.landing header .container nav ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.landing header .container nav ul li a {
+  color: var(--black-Color);
+  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  display: inline-block;
+}
+.landing header .container nav ul li a:hover {
+  color: var(--brown-color);
+  font-weight: bold;
+  scale: 1.2;
+}
+.landing header .container nav ul li a.active {
+  color: var(--brown-color);
+  font-weight: bold;
+  scale: 1.2;
+}
+.landing header .container .right-side {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.landing header .container .right-side .cart-icon {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  -webkit-transition: 0.3s ease-in-out;
+  -moz-transition: 0.3s ease-in-out;
+  -ms-transition: 0.3s ease-in-out;
+  -o-transition: 0.3s ease-in-out;
+}
+.landing header .container .right-side .cart-icon:hover {
+  transform: scale(1.2);
+  color: var(--brown-color);
+}
+.landing .content {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background-image: url("../Images/Coffee-2.webp");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing .content .text {
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px;
+}
+.landing .content .text h1 {
+  font-size: 60px;
+  color: var(--white-color);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px var(--black-Color);
+  font-family: var(--font-family);
+  line-height: 8px;
+}
+.landing .content .text h2 {
+  font-size: 30px;
+  color: var(--white-color);
+  font-weight: bold;
+  text-shadow: 2px 2px 4px var(--black-Color);
+  font-family: var(--font-family);
+}
+.landing .content .text p {
+  color: var(--white-color);
+  margin: 12px 0;
+  font-size: 16px;
+  text-shadow: 2px 2px 4px var(--black-Color);
+}
+.landing .content .text a {
+  display: inline-block;
+  padding: 10px 20px;
+
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -o-border-radius: 2px;
+  background-color: var(--white-color);
+  color: var(--brown-color);
+}
+
+.landing .content .text a:hover {
+  background-color: var(--brown-color);
+  color: var(--white-color);
+  scale: 1.2;
+}
+@media (max-width: 767px) {
+  .landing header .container nav {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    background-color: var(--baige-color);
+    width: 100%;
+    height: 0;
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+  .landing header .container nav.active {
+    height: 220px;
+    padding: 20px 50px;
+  }
+  .landing header .container nav ul {
+    flex-direction: column;
+    opacity: 0;
+  }
+  .landing header .container nav.active ul {
+    opacity: 1;
+    transition: all 1s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+  }
+  .landing header .container .btn {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+  .landing header .container .btn .btn-line {
+    width: 100%;
+    height: 2px;
+    background-color: var(--black-Color);
+    transition: all 0.5s ease;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+  }
+  .landing header .container .btn.burger .btn-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    -webkit-transform: rotate(45deg) translate(5px, 5px);
+    -moz-transform: rotate(45deg) translate(5px, 5px);
+    -ms-transform: rotate(45deg) translate(5px, 5px);
+    -o-transform: rotate(45deg) translate(5px, 5px);
+  }
+  .landing header .container .btn.burger .btn-line:nth-child(2) {
+    opacity: 0;
+    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    -ms-transform: translateX(100%);
+    -o-transform: translateX(100%);
+  }
+  .landing header .container .btn.burger .btn-line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+    -webkit-transform: rotate(-45deg) translate(6px, -6px);
+    -moz-transform: rotate(-45deg) translate(6px, -6px);
+    -ms-transform: rotate(-45deg) translate(6px, -6px);
+    -o-transform: rotate(-45deg) translate(6px, -6px);
+  }
+  .landing .content .text {
+    width: 100%;
+  }
+  .landing .content .text h1 {
+    font-size: 30px;
+  }
+  .landing .content .text h2 {
+    font-size: 20px;
+  }
+  .landing .content .text p {
+    font-size: 14px;
+  }
+  .landing .content .text a {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
+.corr {
+  background-color: var(--baige-color);
+  padding: 20px;
+}
+.corr .container {
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("../Images/Shop-Section.webp");
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.corr .container .text h3 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: var(--white-color);
+  font-family: var(--font-family);
+  text-shadow: 2px 2px 4px var(--black-Color);
+}
+@media (max-width: 767px) {
+  .corr .container {
+    padding: 0;
+  }
+  .corr .container .text h3 {
+    font-size: 30px;
+  }
+}
